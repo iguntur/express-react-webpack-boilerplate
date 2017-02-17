@@ -9,11 +9,16 @@ const dir = {
 module.exports = {
 	devtool: 'source-map',
 
-	entry: dir.basePath('resources/app.jsx'),
+	entry: {
+		app: [
+			'webpack-hot-middleware/client',
+			dir.basePath('app/components/App.jsx')
+		]
+	},
 
 	output: {
 		path: dir.basePath('public/assets/js'),
-		filename: 'bundle.js',
+		filename: '[name].js',
 		publicPath: '/public/'
 	},
 
