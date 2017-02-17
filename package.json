@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf public/*",
     "build": "npm run clean && webpack --hide-modules",
-    "dev": "npm run webpack && node server.js"
+    "dev": "npm run build && node server.js"
   },
   "keywords": [],
   "author": "Guntur Poetra <poetra.guntur@gmail.com> (http://guntur.starmediateknik.com/)",
